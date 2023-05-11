@@ -6,6 +6,8 @@ const app = express();
 const productRouter = require("./api/routes/products");
 const orderRouter = require("./api/routes/orders");
 
+
+
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
