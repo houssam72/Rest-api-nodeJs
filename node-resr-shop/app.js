@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const productRouter = require("./api/routes/products");
 const orderRouter = require("./api/routes/orders");
+const userRoutes = require("./api/routes/user");
 
 app.use(morgan("dev"));
 // Upload en public
@@ -27,6 +28,7 @@ app.use((req, res, next) => {
 
 app.use("/products", productRouter);
 app.use("/orders", orderRouter);
+app.use("/user", userRoutes);
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
