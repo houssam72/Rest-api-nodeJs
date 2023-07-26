@@ -4,7 +4,7 @@ const OrdersController = require("../controllers/order");
 
 const router = express.Router();
 
-router.get("/", checkAuth, OrdersController.order_get_all);
+router.get("/", OrdersController.order_get_all);
 
 router.post("/", checkAuth, OrdersController.orders_create_order);
 
